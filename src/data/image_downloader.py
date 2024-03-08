@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-BASE_DIR = 'C:/Users/Admin/Desktop/umico-ai'
+#BASE_DIR = 'C:/Users/Admin/Desktop/umico-ai'
 
 
 def download_and_save_image(product_url):
@@ -22,7 +22,7 @@ def download_and_save_image(product_url):
     # Download the image
     response = requests.get(image_url)
     if response.status_code == 200:
-        with open(BASE_DIR + f'/data/raw/img/{file_name}.png', 'wb') as f:
+        with open(f'/img/{file_name}.png', 'wb') as f:
             f.write(response.content)
         print('Image downloaded successfully.')
     else:
